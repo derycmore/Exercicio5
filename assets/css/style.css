@@ -57,10 +57,58 @@ body{
     align-items: center;
     transition: background-color 0.3s ease;
 }
+.calculator-container{
+    width: 450px;
+    height: 400px;
+}
+
+.header{
+    align-content: center;
+    display: flex;
+}
+
+.display{
+    align-items: center;
+    display: flex;
+    width: 430px;
+    height: 100px;
+    align-items: center;
+}
 
 h1{
-    height: 40px;
-    width: 70px;
-    box-shadow: 10px;
-    background-color: rgb(236, 28, 28);
+    height: 30px;
+    width: 330px;
+}
+
+
+
+.number{
+    width: 100px;
+    height: 100px;
+}
+
+.action{
+    width: 100px;
+    height: 100px;
+}
+
+.operator{
+    width: 100px;
+    height: 100px;
+}
+
+.span-2{
+    width: 205px;
+    height: 100px;
+}
+
+.result{
+    width: 414px;
+    height: 100px;
+    background-color: var(--theme1-screens-bg);
+    font-weight: bold;
+    font-size: 80px;
+    font-display: flex;
+    margin: 1px;
+    border-radius: 3%;
 }

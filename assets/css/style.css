@@ -6,7 +6,7 @@
 :root{
     /*tema 1(padrão) */
 
-    --theme1-bg: hsl(313, 100%, 45%);
+    --theme1-bg: hsl(222, 26%, 31%);
     --theme1-keypad-bg: hsl(223, 31%, 20%);
     --theme1-screens-bg: hsl(224, 36%, 15%);
     --theme1-key-bg: hsl(30, 25%, 89%);
@@ -58,57 +58,59 @@ body{
     transition: background-color 0.3s ease;
 }
 .calculator-container{
-    width: 450px;
-    height: 400px;
-}
-
-.header{
-    align-content: center;
     display: flex;
+    width: 600px;
+    height: 700px;
+    box-shadow: 100%;
+    flex-direction: column;
+    border-radius: 30%;
+border-color: var(--theme1-bg);
 }
-
 .display{
-    align-items: center;
     display: flex;
-    width: 430px;
     height: 100px;
+    width: 500px;
+    justify-content: center;
     align-items: center;
+    border-radius: 30%;
+    
 }
-
-h1{
-    height: 30px;
-    width: 330px;
+.keypad{
+    background-color: var(--theme1-keypad-bg);
+    display: flex;
+    flex-wrap: wrap;
+    height: 560px;
 }
-
-
-
-.number{
-    width: 100px;
-    height: 100px;
+.key{
+    width: 90px;
+    height: 90px;
+    border-radius: 10%;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    margin: 3px;
+    align-items: center;
 }
 
 .action{
-    width: 100px;
-    height: 100px;
-}
-
-.operator{
-    width: 100px;
-    height: 100px;
+    background-color: var(--theme1-action-bg);
+    background-color: var(--theme1-action-shadow);
+        color: var(--theme1-key-bg);
 }
 
 .span-2{
-    width: 205px;
-    height: 100px;
+    width: 186px;
+    background-color: var(--theme1-action-bg);
+    background-color: var(--theme1-action-shadow);
+        color: var(--theme1-key-bg);
 }
 
-.result{
-    width: 414px;
-    height: 100px;
-    background-color: var(--theme1-screens-bg);
-    font-weight: bold;
-    font-size: 80px;
-    font-display: flex;
-    margin: 1px;
-    border-radius: 3%;
+.equals{
+    background-color: var(--theme1-equals-bg);
 }
+
+.header{
+
+}
+
+

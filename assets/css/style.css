@@ -20,10 +20,10 @@
 
         /*tema 2(padrão) */
 
-    --theme2-bg: hsl(222, 26%, 31%);
-    --theme2-keypad-bg: hsl(223, 31%, 20%);
+    --theme2-bg: hsl(221, 100%, 50%);
+    --theme2-keypad-bg: hsl(303, 100%, 68%);
     --theme2-screens-bg: hsl(224, 36%, 15%);
-    --theme2-key-bg: hsl(30, 25%, 89%);
+    --theme2-key-bg: hsl(182, 100%, 50%);
     --theme2-key-shadow: hsl(28, 16%, 65%);
     --theme2-action-bg: hsl(225, 21%, 49%);
     --theme2-action-shadow: hsl(224, 28%, 35%);
@@ -34,17 +34,17 @@
 
         /*tema 3(padrão) */
 
-    --theme3-bg: hsl(222, 26%, 31%);
-    --theme3-keypad-bg: hsl(223, 31%, 20%);
+    --theme3-bg: hsl(123, 100%, 48%);
+    --theme3-keypad-bg: hsl(223, 100%, 48%);
     --theme3-screens-bg: hsl(224, 36%, 15%);
-    --theme3-key-bg: hsl(30, 25%, 89%);
-    --theme3-key-shadow: hsl(28, 16%, 65%);
-    --theme3-action-bg: hsl(225, 21%, 49%);
+    --theme3-key-bg: hsl(30, 65%, 38%);
+    --theme3-key-shadow: hsl(29, 59%, 41%);
+    --theme3-action-bg: hsl(0, 0%, 81%);
     --theme3-action-shadow: hsl(224, 28%, 35%);
     --theme3-equals-bg: hsl(6, 63%, 50%);
     --theme3-equals-shadow: hsl(6, 70%, 34%);
-    --theme3-text: hsl(0, 0%, 100%);
-    --theme3-key-text: hsl(221, 14%, 31%);
+    --theme3-text: hsl(0, 100%, 50%);
+    --theme3-key-text: hsl(318, 100%, 48%);
 }
 
 body{
@@ -59,27 +59,40 @@ body{
 }
 .calculator-container{
     display: flex;
-    width: 600px;
-    height: 700px;
+    width: 430px;
     box-shadow: 100%;
     flex-direction: column;
     border-radius: 30%;
-border-color: var(--theme1-bg);
+    border-color: var(--theme1-bg);
+    justify-content: center;
+    align-items: center;
 }
+
 .display{
     display: flex;
     height: 100px;
-    width: 500px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30%;
-    
+    width: 420px;
+    justify-content: end;
+    align-items: end;
+    border-radius: 10px;
+    background-color: var(--theme1-screens-bg);
+    margin: 20px;
+    padding: 7px;
+}
+.result{
+    font-size: 65px;
+
 }
 .keypad{
     background-color: var(--theme1-keypad-bg);
+    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    height: 560px;
+    height: 520px;
+    justify-content: center;
+    width: 420px;
+    border-radius: 10px;
+    justify-items: center;
 }
 .key{
     width: 90px;
@@ -94,15 +107,13 @@ border-color: var(--theme1-bg);
 
 .action{
     background-color: var(--theme1-action-bg);
-    background-color: var(--theme1-action-shadow);
-        color: var(--theme1-key-bg);
+    color: var(--theme1-key-bg);
 }
 
 .span-2{
     width: 186px;
     background-color: var(--theme1-action-bg);
-    background-color: var(--theme1-action-shadow);
-        color: var(--theme1-key-bg);
+    color: var(--theme1-key-bg);
 }
 
 .equals{
@@ -110,7 +121,110 @@ border-color: var(--theme1-bg);
 }
 
 .header{
-
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 420px;
+}
+.theme-switcher{
+    justify-self: end;
+    display: flex;
+    align-items: center;
 }
 
+.theme-toggle{
+    display: flex;
+    background-color: var(--theme1-screens-bg);
+    width: 36px;
+    height: 15px;
+    border-radius: 30px;
+    position: relative;
+}
+.toggle-ball{
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    position: absolute;
+    transform: translateX(0px)
+}
 
+span{
+    width: 100px;
+}
+
+.theme-2 {
+    background-color: var(--theme2-bg);
+    color: var(--theme3-text);
+}
+
+.theme-2 .display {
+    background-color: var(--theme2-screens-bg);
+}
+
+.theme-2 .keypad {
+    background-color: var(--theme2-keypad-bg);
+}
+
+.theme-2 .key {
+    background-color: var(--theme2-key-bg);
+    box-shadow: 0 4px 0 0 var(--theme3-key-shadow);
+}
+
+.theme-2 .action{
+    background-color: var(--theme2-action-bg);
+    box-shadow: var(--theme3-action-shadow);
+}
+
+.theme-2 .equals{
+    background-color: var(--theme2-equals-bg);
+    box-shadow: var(--theme3-equals-shadow);
+}
+
+.theme-2 .theme-toggle{
+    background-color: var(--theme2-keypad-bg);
+}
+
+.theme-2 .toggle-ball{
+    background-color: var(--theme2-equals-bg);
+    transform: translateX(10px);
+}
+
+ /*  Tema  */
+.theme-3 {
+    background-color: var(--theme3-bg);
+    color: var(--theme3-text);
+}
+
+.theme-3 .display {
+    background-color: var(--theme3-screens-bg);
+}
+
+.theme-3 .keypad {
+    background-color: var(--theme3-keypad-bg);
+}
+
+.theme-3 .key {
+    background-color: var(--theme3-key-bg);
+    box-shadow: 0 4px 0 0 var(--theme3-key-shadow);
+}
+
+.theme-3 .action{
+    background-color: var(--theme3-action-bg);
+    box-shadow: var(--theme3-action-shadow);
+}
+
+.theme-3 .equals{
+    background-color: var(--theme3-equals-bg);
+    box-shadow: var(--theme3-equals-shadow);
+}
+
+.theme-3 .theme-toggle{
+    background-color: var(--theme3-keypad-bg);
+}
+
+.theme-3 .toggle-ball{
+    background-color: var(--theme3-equals-bg);
+    transform: translateX(20px);
+}
